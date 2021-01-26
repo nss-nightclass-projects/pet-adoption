@@ -1,3 +1,5 @@
+console.log("Hello, Beautiful, from main.js");
+
 const pets = [
     {
       name: "Dusty",
