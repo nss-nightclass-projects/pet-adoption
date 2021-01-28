@@ -206,7 +206,42 @@ const pets = [
       name: "Lucy",
       color: "Red",
       specialSkill: "Doesn’t get weirded out by the word “moist.”",
-      type: "dino",
-      imageUrl: "http://lsae2.iypcdn.com/static//modules/uploads/photos/language1/dino-live-22.jpg?119"
+     type: "dino",
+    imageUrl: "http://lsae2.iypcdn.com/static//modules/uploads/photos/language1/dino-live-22.jpg?119"
     }
   ];
+
+  const printToDom = (divId, textToPrint) => {
+    const selectedDiv = document.querySelector(divId);
+    selectedDiv.innerHTML = textToPrint;
+  }
+
+  const petsPrint = (taco) => {
+    let domString = '';
+    for (let i = 0; i < taco.length; i++) {
+         domString += `<div class="card my-2" style="width: 18rem;" id=${i}>
+                         <div class="img-container" style="background-image: url('${taco[i].imageUrl}');"></div>
+                         <div class="card-body">
+                           <p class="card-text">${taco[i].name}</p>
+                          <p class="card-text">${taco[i].color}</p>
+                          <p class="card-text">${taco[i].specialSkill}</p>
+                           <p class="card-text">${taco[i].type}</p>
+                           <p class="card-text">${taco[i].imageUrl}</p>
+                           <button type="button" class="btn btn-danger" id="${i}">Delete</button>
+                      </div>
+                     </div>`;
+      }
+      printToDom('#pets', domString);
+  }
+  const init = () => {
+  petsPrint(pets);
+  }
+
+  init();
+  
+  const buttonEvents = () => {
+    document.querySelector('#All').addEventListener('click', handleButtonClick);
+    document.querySelector('#Dinos').addEventListener('click', handleButtonClick);
+    document.querySelector('#Cats').addEventListener('click', handleButtonClick);
+     document.querySelector('#Dogs').addEventListener('click', handleButtonClick);
+  }
