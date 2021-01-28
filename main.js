@@ -236,8 +236,29 @@ const pets = [
     printToDom('#pets', domString);
   }
 
+const handleButtonClick = (e) => {
+  const buttonId = e.target.id;
+
+  if (buttonId === 'Cats') {
+    document.querySelector('#Cats').style.backgroundColor = "#333"
+    }
+  if (buttonId === 'Dogs') {
+    document.querySelector('#Dogs').style.backgroundColor = "#888"
+    }
+  if (buttonId === 'Dinos') {
+    document.querySelector('#Dinos').style.backgroundColor = "#555"
+    }
+}
   
+  const buttonEvents = () => {
+    document.querySelector('#Cats').addEventListener('click', handleButtonClick);
+    document.querySelector('#Dogs').addEventListener('click', handleButtonClick);
+    document.querySelector('#Dinos').addEventListener('click', handleButtonClick);
+  }
+
+
   const init = () => {
+    buttonEvents();
     petBuilder(pets);
   }
   
