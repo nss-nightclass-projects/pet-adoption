@@ -214,100 +214,31 @@ const pets = [
   ];
 
 
-const printToDom = (divId, textToPrint) => {
-  const selectedDiv = document.querySelector(divId);
-  selectedDiv.innerHTML = textToPrint;
-}
-
-const petBuilder = (obj) => {
-  let domString = '';
-  for (let i = 0; i < obj.length; i++) {
-    domString += `<div class="card my-2" style="width: 18rem;" id=${i}>
-                    <div class="img-container" style="background-image: url('${obj[i].imageUrl}');"></div>
-                    <div class="card-body">
-                      <p class="card-text">${obj[i].name}</p>
-                      <p class="card-text">${obj[i].color}</p>
-                      <p class="card-text">${obj[i].specialSkill}</p>
-                      <p class="card-text">${obj[i].typeOfPet}</p>
-                      <button type="button" class="btn btn-danger" id="${i}">Delete</button>
-                    </div>
-                  </div>`;
+  const printToDom = (divId, textToPrint) => {
+    const selectedDiv = document.querySelector(divId);
+    selectedDiv.innerHTML = textToPrint;
   }
-
-  printToDom('#pets', domString);
-}
-
-const handleButtonClick = (e) => {
-  const buttonId = e.target.id;
-
-  if (buttonId === 'Cats') {
-    document.querySelector('body').style.backgroundColor = '#000';
-  } else if (buttonId === 'Dogs') {
-    document.querySelector('body').style.backgroundColor = '#FFF';
-  } else if (buttonId === 'Dinos') {
-    document.querySelector('body').style.backgroundColor = '#808080';
-  }
-
-  // const selectedpets = [];
-  // for (let i = 0; i < pets.length; i++) {
-  //   if (pets[i].pets === buttonId) {
-  //     selectedpets.push(pets[i]);
-  //   }
-  // }
-}
-
-
-const getFormInfo = (e) => {
-  e.preventDefault();
-
-  const image = document.querySelector('#image').value;
-  const name = document.querySelector('#name').value;
-  const color = document.querySelector('#color').value;
-  const specialSkill = document.querySelector('#specialSkill').value;
-  const typeOfPet = document.querySelector('#typeOfPet').value;
-
-
-  const obj = {
-    image,
-    name,
-    color,
-    specialSkill,
-    typeOfPet,
-  }
-
-  pets.push(obj);
-  petBuilder(pets);
-
-  document.querySelector('form').reset();
-}
-
-// D in CRUD: Delete the Pie
-// const deletePie = (e) => {
-//   const targetType = e.target.type;
-//   const targetId = e.target.id;
-//   if (targetType === 'button') {
-//     // DO SOMETHING
-//     pets.splice(targetId, 1);
-//   } 
-
-//   petBuilder(pets);
-// }
-
-// const buttonEvents = () => {
-//   document.querySelector('#All').addEventListener('click', handleButtonClick);
-//   document.querySelector('#Doc').addEventListener('click', handleButtonClick);
-//   document.querySelector('#Aja').addEventListener('click', handleButtonClick);
-//   document.querySelector('#Trinity').addEventListener('click', handleButtonClick);
   
-//   // Targeting the Delete Button
-//   document.querySelector('#pets').addEventListener('click', deletePie);
+  const petBuilder = (obj) => {
+    let domString = '';
+    for (let i = 0; i < obj.length; i++) {
+      domString += `<div class="card my-2" style="width: 18rem;" id=${i}>
+                      <div class="img-container" style="background-image: url('${obj[i].imageUrl}');"></div>
+                      <div class="card-body">
+                        <p class="card-text">${obj[i].name}</p>
+                        <p class="card-text">${obj[i].color}</p>
+                        <p class="card-text">${obj[i].specialSkill}</p>
+                        <p class="card-text">${obj[i].imageUrl}</p>
+                      </div>
+                    </div>`;
+    }
+  
+    printToDom('#pets', domString);
+  }
 
-//   document.querySelector('form').addEventListener('submit', getFormInfo);
-// }
-
-// const init = () => {
-//   buttonEvents();
-//   petBuilder(pets);
-// }
-
-init();
+  
+  const init = () => {
+    petBuilder(pets);
+  }
+  
+  init();
