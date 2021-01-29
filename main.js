@@ -110,7 +110,7 @@ const pets = [
       color: "Poop-Colored",
       specialSkill: "Drives at a safe rate of speed in snow or rain.",
       type: "dino",
-      imageUrl: "https://images.readwrite.com/wp-content/uploads/2018/03/t-rex-dino-quiz-e1490854556549.jpg"
+      imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKNJ4J6Ao-vvnJgGbzSKqDUswE9mEod6k7og&usqp=CAU"
     },
     {
       name: "Muffin",
@@ -124,14 +124,14 @@ const pets = [
       color: "Poop-Colored",
       specialSkill: "Proficient in air guitar",
       type: "dino",
-      imageUrl: "https://www.nation.co.ke/image/view/-/4078922/highRes/1742693/-/maxw/600/-/1453yvh/-/DINO.jpg"
+      imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9rVs2Ed_VXKq-QFxBNdA8tTS4JsioKfXXXg&usqp=CAU"
     },
     {
       name: "Callie",
       color: "Blue",
       specialSkill: "Listens attentively to boring stories.",
       type: "dog",
-      imageUrl: "http://dailynewsdig.com/wp-content/uploads/2014/03/Creative-And-Funny-Dog-Stock-Photography-Pictures-2.jpg"
+      imageUrl: "data:image/jpeg;base64,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"
     },
     {
       name: "Spooky",
@@ -145,14 +145,14 @@ const pets = [
       color: "Red",
       specialSkill: "Owns a Nintendo Power Glove.",
       type: "dino",
-      imageUrl: "https://img.buzzfeed.com/buzzfeed-static/static/2015-11/2/12/enhanced/webdr15/anigif_enhanced-29802-1446485228-10.gif?crop=250:165;0,0&downsize=715"
+      imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1Zk_MpUhGfQFamTlmiFWtoW-yke5Fzwhacg&usqp=CAU"
     },
     {
       name: "Snuggles",
       color: "Orange",
       specialSkill: "Is comfortable with jokes about his receding hairline.",
       type: "cat",
-      imageUrl: "http://funnyanimalphoto.com/wp-content/uploads/2013/08/cat_caught_mouse_thegatewaypundit.jpg"
+      imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgM9H_0RnL7o66Ed9bEf2KNWOOWnMGxPNqfA&usqp=CAU"
     },
     {
       name: "Buddy",
@@ -173,7 +173,7 @@ const pets = [
       color: "Red",
       specialSkill: "Knows the words to 4 rap songs.",
       type: "cat",
-      imageUrl: "http://funbk.s3.amazonaws.com/wp-content/uploads/2016/06/funny-cat-video-which-will-make-you-laugh-louder.jpg"
+      imageUrl: "data:image/jpeg;base64,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"
     },
     {
       name: "Bubba",
@@ -208,6 +208,64 @@ const pets = [
       color: "Red",
       specialSkill: "Doesn’t get weirded out by the word “moist.”",
       type: "dino",
-      imageUrl: "http://lsae2.iypcdn.com/static//modules/uploads/photos/language1/dino-live-22.jpg?119"
+      imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSP17NVL3kZJSXlF7wVcnZzaGX5Y1wvkzhfQg&usqp=CAU"
     }
   ];
+
+  const printToDom = (divId, textToPrint) => {
+    const selectedDiv = document.querySelector(divId);
+    selectedDiv.innerHTML = textToPrint;
+  }
+
+  const petBuilder = (taco) => {
+    let domString = ' ';
+    for (let i = 0; i < taco.length; i++) {
+      domString += `<div class="card my-2" style="width: 18rem;" id=${i}>
+      <div class="img-container" style="background-image: url('${taco[i].imageUrl}');"></div>
+      <div class="card-body">
+        <p class="card-text">${taco[i].name}</p>
+        <p class="card-text">${taco[i].color}</p>
+        <p class="card-text">${taco[i].specialSkill}</p>
+        <p class="card-text">${taco[i].type}</p>
+        
+      </div>
+    </div>`;
+    }
+    printToDom('#pets', domString);
+  }
+
+  const handleButtonClick = (e) => {
+    const buttonId = e.target.id;
+
+    const selectedPets = [];
+      for (let i = 0; i < pets.length; i++) {
+        if(pets[i].type === buttonId) {
+        selectedPets.push(pets[i]);
+        }
+      }
+
+      if (buttonId === 'all') {
+        petBuilder(pets);
+      } else {
+        petBuilder(selectedPets);
+      }
+  }
+
+  const buttonEvents = () => {
+    // document.querySelector('#all').addEventListener('click', handleButtonClick);
+    document.querySelector('#cats').addEventListener('click', handleButtonClick);
+    document.querySelector('#dogs').addEventListener('click', handleButtonClick);
+    document.querySelector('#dinos').addEventListener('click', handleButtonClick);
+    }
+
+
+
+
+
+
+  const init = () => {
+    buttonEvents();
+    petBuilder(pets);
+  }
+  
+  init();
