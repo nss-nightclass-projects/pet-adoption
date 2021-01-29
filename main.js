@@ -229,7 +229,7 @@ petArr.forEach((element, i) => {
       <p class="card-text">${element.color}</p>
       <p class="card-text">${element.specialSkill}</p>
       <p class="card-text">${element.type}</p>
-      <button type="button" clas="btn btn-danger" id="${i}">Adopt!</button>
+      <button type="button" class="btn btn-danger" id="${i}">Adopt!</button>
     
      
     </div>
@@ -238,22 +238,38 @@ petArr.forEach((element, i) => {
   printToDom('#pets', domString);
     }
 
-  const init = () => {
+    const buttonClick = (e) => {
+      const buttonId = e.target.id;
+    
+      const selectedPets = [];
+    for (let i = 0; i < pets.length; i++) {
+      if (pets[i].type === buttonId) {
+        selectedPets.push(pets[i]);
+      }
+    } 
+
+    if (buttonId === 'See-all') {
+      petBuilder(pets);
+    } else {
+      petBuilder(selectedPets);
+   }
+  }
+    
+     const selectAnimal = () => {
+       document.querySelector('#dog').addEventListener('click', buttonClick);
+       document.querySelector('#cat').addEventListener('click', buttonClick);
+       document.querySelector('#dino').addEventListener('click', buttonClick);
+       document.querySelector('#See-all').addEventListener('click', buttonClick);
+     }
+    
+  
+
+  const run = () => {
     petBuilder(pets);
+    selectAnimal();
 
   }
 
-const buttonClick = (e) => {
-  const buttonId = e.target.id;
-
-  const selectedPets = [];
-for (let i = 0; i < pets.length; i++) {
-  if (pets[i].name === buttonId) {
-    selectedPets.push(pets[i]);
-  }
-}
- }
 
 
-
-  init();
+  run();
