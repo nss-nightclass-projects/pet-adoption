@@ -236,10 +236,10 @@ const pets = [
 
   const handleButtonClick = (e) => {
     const buttonId = e.target.id;
-
     const selectedPets = [];
+
       for (let i = 0; i < pets.length; i++) {
-        if(pets[i].type === buttonId) {
+        if (pets[i].type === buttonId) {
         selectedPets.push(pets[i]);
         }
       }
@@ -249,10 +249,10 @@ const pets = [
       } else {
         petBuilder(selectedPets);
       }
-  }
+    }
 
   const buttonEvents = () => {
-    // document.querySelector('#all').addEventListener('click', handleButtonClick);
+    document.querySelector('#all').addEventListener('click', handleButtonClick);
     document.querySelector('#cats').addEventListener('click', handleButtonClick);
     document.querySelector('#dogs').addEventListener('click', handleButtonClick);
     document.querySelector('#dinos').addEventListener('click', handleButtonClick);
