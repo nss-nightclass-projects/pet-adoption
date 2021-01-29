@@ -11,7 +11,7 @@ const pets = [
       color: "Poop-Colored",
       specialSkill: "Just picks the tomatoes off of a sandwich instead of requesting a whole new sandwich.",
       type: "dino",
-      imageUrl: "http://www.jozilife.co.za/wp-content/uploads/The-Dino-Expo.jpg"
+      imageUrl: "https://i.guim.co.uk/img/media/d85e9bc3fe0310427b498ffee76dfa940e42173d/0_339_2575_1545/master/2575.jpg?width=1200&height=1200&quality=85&auto=format&fit=crop&s=926e708ff314d1f06421ad78ec4f4c8d"
     },
     {
       name: "Whiskers",
@@ -53,7 +53,7 @@ const pets = [
       color: "Grey",
       specialSkill: "Comfortable in the outdoors for up to eight hours.",
       type: "dino",
-      imageUrl: "http://www.theouthousers.com/images/jck//ThanosCopter/news/grumpasaur.jpg"
+      imageUrl: "https://thumbor.forbes.com/thumbor/fit-in/1200x0/filters%3Aformat%28jpg%29/https%3A%2F%2Fspecials-images.forbesimg.com%2Fimageserve%2F5f1f1e37e009c65f2c5972c0%2F0x0.jpg"
     },
     {
       name: "Sassy",
@@ -109,7 +109,7 @@ const pets = [
       color: "Poop-Colored",
       specialSkill: "Drives at a safe rate of speed in snow or rain.",
       type: "dino",
-      imageUrl: "https://images.readwrite.com/wp-content/uploads/2018/03/t-rex-dino-quiz-e1490854556549.jpg"
+      imageUrl: "https://s.abcnews.com/images/Technology/ht_dinosaurs_3_er_160603_16x9_992.jpg"
     },
     {
       name: "Muffin",
@@ -123,14 +123,14 @@ const pets = [
       color: "Poop-Colored",
       specialSkill: "Proficient in air guitar",
       type: "dino",
-      imageUrl: "https://www.nation.co.ke/image/view/-/4078922/highRes/1742693/-/maxw/600/-/1453yvh/-/DINO.jpg"
+      imageUrl: "https://www.icr.org/i/Main%20Stage%20-%201400x1050/Sex_Dinosaurs_1400x1050.jpg"
     },
     {
       name: "Callie",
       color: "Blue",
       specialSkill: "Listens attentively to boring stories.",
       type: "dog",
-      imageUrl: "http://dailynewsdig.com/wp-content/uploads/2014/03/Creative-And-Funny-Dog-Stock-Photography-Pictures-2.jpg"
+      imageUrl: "https://www.humanesociety.org/sites/default/files/styles/1240x698/public/2019/02/dog-451643.jpg?h=bf654dbc&itok=MQGvBmuo"
     },
     {
       name: "Spooky",
@@ -144,14 +144,14 @@ const pets = [
       color: "Red",
       specialSkill: "Owns a Nintendo Power Glove.",
       type: "dino",
-      imageUrl: "https://img.buzzfeed.com/buzzfeed-static/static/2015-11/2/12/enhanced/webdr15/anigif_enhanced-29802-1446485228-10.gif?crop=250:165;0,0&downsize=715"
+      imageUrl: "https://images-na.ssl-images-amazon.com/images/S/pv-target-images/4bf1fa4c2a6ac27afd7354ea39fb6da2b0389945af07258c182c10d0f85c5ee8._SX1080_.jpg"
     },
     {
       name: "Snuggles",
       color: "Orange",
       specialSkill: "Is comfortable with jokes about his receding hairline.",
       type: "cat",
-      imageUrl: "http://funnyanimalphoto.com/wp-content/uploads/2013/08/cat_caught_mouse_thegatewaypundit.jpg"
+      imageUrl: "https://gray-kalb-prod.cdn.arcpublishing.com/resizer/6oGNzXI9m8v2XeqloOvSCPVTR44=/1200x675/smart/cloudfront-us-east-1.images.arcpublishing.com/gray/JVOHA3G6AJIPXNJ3ATR2NBUEZQ.jpg"
     },
     {
       name: "Buddy",
@@ -172,7 +172,7 @@ const pets = [
       color: "Red",
       specialSkill: "Knows the words to 4 rap songs.",
       type: "cat",
-      imageUrl: "http://funbk.s3.amazonaws.com/wp-content/uploads/2016/06/funny-cat-video-which-will-make-you-laugh-louder.jpg"
+      imageUrl: "https://3.bp.blogspot.com/-jvTGn6-_MWk/TfTidKH8MqI/AAAAAAAAAG0/_s94fT6A1Mk/s1600/IPKat%2B13%2Bhello%2Bkitty%2Bcat.jpg"
     },
     {
       name: "Bubba",
@@ -207,6 +207,77 @@ const pets = [
       color: "Red",
       specialSkill: "Doesn’t get weirded out by the word “moist.”",
       type: "dino",
-      imageUrl: "http://lsae2.iypcdn.com/static//modules/uploads/photos/language1/dino-live-22.jpg?119"
+      imageUrl: "https://images.huffingtonpost.com/2016-12-07-1481136416-8823020-DinoChickensHeader-thumb.jpeg"
     }
   ];
+
+  // Print to DOM function
+const printToDom = (divId, textToPrint) => {
+  const selectedDiv = document.querySelector(divId);
+  selectedDiv.innerHTML = textToPrint;
+}
+
+  // card builder function
+
+  const cardBuilder = (taco) => {
+let domString = '';
+
+for (let i = 0; i < taco.length; i ++) {
+  domString += `<div class="card text-center my-2 pet-card" style="width: 18rem;" id=${i}>
+  <div class="card-header fw-bold text-muted ">
+    ${taco[i].name}
+  </div>
+  <div class="card-body">
+   <div class="card-image-holder">
+    <img class="img-thumbnail p-2" src="${taco[i].imageUrl}" alt="cute-cat">
+  </div>
+    <h5 class="card-title">${taco[i].color}</h5>
+    <p class="card-text">${taco[i].specialSkill}</p>
+  </div>
+  <div class="card-footer ${taco[i].type}">
+    ${taco[i].type}
+  </div>
+</div>`
+}
+printToDom('#pets', domString)
+
+ }
+  //  print to dom function + dom string
+
+
+  //button click function <update cards based on ID)
+const handleButtonClick = (e) => {
+  const buttonId = e.target.id;
+  
+  const selectedPets = [];
+  for (let i = 0; i < pets.length; i++){
+    if (pets[i].type === buttonId) {
+      selectedPets.push(pets[i]);
+    }
+  }
+  if (buttonId === 'all') {
+    cardBuilder(pets);
+    console.log("all")
+  } else {
+    cardBuilder(selectedPets);
+    console.log("specific")
+  }
+}
+
+
+  //button events function
+const buttonEvents = () => {
+  document.querySelector('#cat').addEventListener('click', handleButtonClick);
+  document.querySelector('#dog').addEventListener('click', handleButtonClick);
+  document.querySelector('#dino').addEventListener('click', handleButtonClick);
+  document.querySelector('#all').addEventListener('click', handleButtonClick);
+}
+
+  //init function
+const init = () => {
+  buttonEvents();
+  cardBuilder(pets);
+}
+
+  //cal init
+init();

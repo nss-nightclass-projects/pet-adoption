@@ -17,28 +17,13 @@
 
     <div class="container">
       <div id="buttons" class="container mt-3 text-center">
-        <button type="button" class="btn btn-primary">Cats</button>
-        <button type="button" class="btn btn-success">Dogs</button>
-        <button type="button" class="btn btn-warning">Dinos</button>
+        <button type="button" class="btn btn-primary" id="cat">Cats</button>
+        <button type="button" class="btn btn-success" id="dog">Dogs</button>
+        <button type="button" class="btn btn-warning" id="dino">Dinos</button>
+        <button type="button" class="btn btn-dark" id ="all">All Pets</button>
       </div>
-
-      <div id="pet-cards" class="d-flex flex-wrap justify-content-around">
-        <div class="card text-center card my-2" style="width: 18rem;">
-          <div class="card-header fw-bold text-muted ">
-            Name
-          </div>
-          <div class="card-body">
-           <div class="card-image-holder">
-            <img class="img-thumbnail p-2" src="http://kittentoob.com/wp-content/uploads/2015/06/funny-cat-with-a-towel.jpg" alt="...">
-          </div>
-            <h5 class="card-title">Color</h5>
-            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-          </div>
-          <div class="card-footer text-muted">
-            Type of Pet
-          </div>
-        </div>
-      </div>
+    <hr />
+    <div id="pets" class="d-flex flex-wrap justify-content-around"></div>
     </div>
 
     <script
