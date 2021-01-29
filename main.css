@@ -1,3 +1,9 @@
 body {
-  background-color: darkorchid;
+  background-color: #FAFAFA;
+}
+
+.img-container {
+  height: 200px;
+  background-size: cover;
+  background-position: center;
 }
