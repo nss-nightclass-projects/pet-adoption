@@ -1,3 +1,9 @@
 body {
-  background-color: rgba(165, 42, 42, 0.349);
+  background-color: beige;
+}
+
+.img-container {
+  height: 200px;
+  background-size: cover;
+  background-position: center;
 }
