@@ -1,3 +1,4 @@
+
 .cat {
 background-color:#cfe2fe;
 border-color: #0d6efd;
@@ -12,3 +13,12 @@ border-color: #0d6efd;
   background-color: #fff3cd;
   border-color: #ffc107;
 }
+
+img {
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+}
+
+/* target the ID for specific colors */
+
