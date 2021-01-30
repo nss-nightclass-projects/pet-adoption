@@ -1,0 +1,9 @@
+body {
+  background-color: darkslateblue;
+}
+
+.img-container {
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+}
