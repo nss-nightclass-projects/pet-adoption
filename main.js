@@ -234,28 +234,44 @@ const pets = [
     printToDom('#pets', domString);
   }
 
+  // const handleButtonClick = (e) => {
+  //   const buttonId = e.target.id;
+  //   const selectedPets = [];
+
+  //     for (let i = 0; i < pets.length; i++) {
+  //       if (pets[i].type === buttonId) {
+  //       selectedPets.push(pets[i]);
+  //       }
+  //     }
+      
+  //     if (buttonId === 'all') {
+  //       petBuilder(pets);
+  //     } else {
+  //       petBuilder(selectedPets)
+  //     }
+  //   }
+
   const handleButtonClick = (e) => {
     const buttonId = e.target.id;
-
+    
     const selectedPets = [];
-      for (let i = 0; i < pets.length; i++) {
-        if(pets[i].type === buttonId) {
+    for (let i = 0; i < pets.length; i++) {
+      if(pets[i].type === buttonId) {
         selectedPets.push(pets[i]);
-        }
       }
-
-      if (buttonId === 'all') {
-        petBuilder(pets);
-      } else {
-        petBuilder(selectedPets);
-      }
+    }
+    if (buttonId === 'all') {
+      petBuilder(pets);
+    } else {
+      petBuilder(selectedPets);
+    }
   }
 
   const buttonEvents = () => {
-    // document.querySelector('#all').addEventListener('click', handleButtonClick);
-    document.querySelector('#cats').addEventListener('click', handleButtonClick);
-    document.querySelector('#dogs').addEventListener('click', handleButtonClick);
-    document.querySelector('#dinos').addEventListener('click', handleButtonClick);
+    document.querySelector('#all').addEventListener('click', handleButtonClick);
+    document.querySelector('#cat').addEventListener('click', handleButtonClick);
+    document.querySelector('#dog').addEventListener('click', handleButtonClick);
+    document.querySelector('#dino').addEventListener('click', handleButtonClick);
     }
 
 
