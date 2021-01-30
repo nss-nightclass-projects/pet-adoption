@@ -210,3 +210,74 @@ const pets = [
       imageUrl: "http://lsae2.iypcdn.com/static//modules/uploads/photos/language1/dino-live-22.jpg?119"
     }
   ];
+
+const printToDom = (divId, petCard) => {
+  const selectedDiv = document.querySelector(divId);
+  selectedDiv.innerHTML = petCard;
+}
+
+const petBuilder = (petArr) => {
+  let domString = '';
+
+  petArr.forEach((element, i) => { 
+    domString += `<div class="card my-2" style="width: 18rem;" id=${i}>
+    <div class="img-container" style="background-image: url('${element.imageUrl}');"></div>
+      <img src="${element.imageUrl}" alt="${element.name}">
+    <div class="card-body">
+      <h5 class="card-title">${element.name}</h5>
+      <p class="card-text">${element.color}</p>
+      <p class="card-text">${element.specialSkill}</p>
+      <button type="button" class="btn btn-info">Adopt Me</button>
+      <button type="button" class="btn btn-danger" id="delete">Put Me Down</button>
+    </div>
+  </div>`;
+  });
+
+  printToDom('#pets', domString);
+}
+
+const petTypeChosen = (e) => {
+  const buttonId = e.target.id;
+  const petCategory = [];
+
+    for (let i = 0; i < pets.length; i++) {
+      if (pets[i].type === buttonId) {
+        petCategory.push(pets[i]);
+      } 
+    }
+    
+    if (buttonId === 'all') {
+      petBuilder(pets);
+    } else {
+      petBuilder(petCategory);
+    }
+}
+
+const putMeDown = (e) => {
+
+  for (let i = 0; i < pets.length; i++) {  
+    const petsId = pets[i];
+    const deleteId = e.target.id;
+    const deleteType = e.target.type;
+   
+  if (deleteId === 'delete' && deleteType === 'button') {
+      pets.splice(pets[i], 1);
+    } 
+  }
+  petBuilder(pets);
+}
+
+function filterSelector() {
+  document.querySelector('#all').addEventListener('click', petTypeChosen);
+  document.querySelector('#cat').addEventListener('click', petTypeChosen);
+  document.querySelector('#dog').addEventListener('click', petTypeChosen);
+  document.querySelector('#dino').addEventListener('click', petTypeChosen);
+  document.querySelector('#pets').addEventListener('click', putMeDown);
+}
+
+const init = () => {
+  filterSelector();
+  petBuilder(pets);
+}
+
+init ();
