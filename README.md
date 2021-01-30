@@ -1,36 +1,38 @@
-Name of the Project: 
-PET ADOPTION WEBSITE
+DATE:
+Jan 29, 2020
 
-Overview of the project: 
-TO CREATE A ONE PAGE SITE THAT HAS 4 BUTTONS FOR A USER
-TO FILTER THROUGH EACH TYPE OF PET FOR ADOPTION. 
 
-Link to your wireframes/prototype
+PROJECT NAME:
+Pet Adoption
+
+PROJECT OVERVIEW:
+To create a one page site with 4 buttons that user
+can use to filter thorough and delete adoptable pets. 
+
+WIREFRAME:
 https://www.figma.com/file/dURnOHYZNqnCJu23o1syZk/Untitled?node-id=0%3A1
 
 
-Link to the deployed project (will learn in week 5)
+LOOM VIDEO PREVIEW:
 
 
-Link to your project board (yes...even though it is a part of the repo)
+PROJECT BOARD:
 https://www.figma.com/files/team/933895381296907971/E14-Group-1---Voter-Heatmapping-Project
 
 
-Description of the user
-USER NAVIGATES TO ANY PAGE
-WHEN EACH BUTTON CLICKED, SHOWS THAT TYPE OF PET
+USER STORY:
+User navigates to any page
+When a user clicks on a button animal card with type appears
+Then user can delete and filter
 
-List of features
-DELETE FEATURE
-FILTER FEATURE
+FEATURES:
+Delete
+Filter
 
-Screenshots of your project
+SCREENSHOTS:
 
-List of contributors and links to their GH profiles
-DANI CROSBY: https://github.com/danicrosby
-ELLIE WALKER: https://github.com/elliewalkersm
-HOLLY PARSONS: https://github.com/hmparsons-sde
-SARA SCHOONOVER: https://github.com/SaraSchoonover
-TAYLOR HARDAWAY: https://github.com/TaylorHardaway
-
-Link to Loom video walkthrough of your app (no more than 1 minute long! Make it great)
+CONTRIBUTORS | Github approvals from:
+Ellie Walker: https://github.com/elliewalkersm
+Holly Parsons: https://github.com/hmparsons-sde
+Sara Schoonover: https://github.com/SaraSchoonover
+Taylor Hardaway: https://github.com/TaylorHardaway
