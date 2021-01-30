@@ -224,7 +224,7 @@ let domString = '';
 
 for (let i = 0; i < taco.length; i ++) {
   domString += `<div class="card text-center my-2 pet-card" style="width: 18rem;" id=${i}>
-  <div class="card-header fw-bold text-muted ">
+  <div class="card-header fw-bold text-muted">
     ${taco[i].name}
   </div>
   <div class="card-body">
@@ -233,6 +233,7 @@ for (let i = 0; i < taco.length; i ++) {
   </div>
     <h5 class="card-title">${taco[i].color}</h5>
     <p class="card-text">${taco[i].specialSkill}</p>
+    <button type="button" class="btn btn-danger delete">Delete</button>
   </div>
   <div class="card-footer ${taco[i].type}">
     ${taco[i].type}
@@ -242,7 +243,7 @@ for (let i = 0; i < taco.length; i ++) {
 printToDom('#pets', domString)
 
  }
-  //  print to dom function + dom string
+ 
 
 
   //button click function <update cards based on ID)
@@ -271,6 +272,9 @@ const buttonEvents = () => {
   document.querySelector('#dog').addEventListener('click', handleButtonClick);
   document.querySelector('#dino').addEventListener('click', handleButtonClick);
   document.querySelector('#all').addEventListener('click', handleButtonClick);
+  
+
+ 
 }
 
   //init function
