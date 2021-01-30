@@ -20,8 +20,7 @@ https://www.loom.com/share/b1d01d4c29d44586a8d825a11b881ac0
 
 
 NELIFY LINK:
-https://loving-wing-32b9d6.netlify.app/
-
+https://dani-crosby-pet-adoption-mockpage.netlify.app/
 
 PROJECT BOARD:
 https://www.figma.com/files/team/933895381296907971/E14-Group-1---Voter-Heatmapping-Project
