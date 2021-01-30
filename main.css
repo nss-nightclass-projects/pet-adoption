@@ -1,0 +1,24 @@
+
+.cat {
+background-color:#cfe2fe;
+border-color: #0d6efd;
+}
+
+.dog {
+  background-color: #d1e7dd;
+  border-color: #198754;
+}
+
+.dino {
+  background-color: #fff3cd;
+  border-color: #ffc107;
+}
+
+img {
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+}
+
+/* target the ID for specific colors */
+
