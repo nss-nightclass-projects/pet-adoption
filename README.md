@@ -13,7 +13,8 @@ WIREFRAME:
 https://www.figma.com/file/dURnOHYZNqnCJu23o1syZk/Untitled?node-id=0%3A1
 
 
-LOOM VIDEO PREVIEW:
+LOOM VIDEO DEMO:
+https://www.loom.com/share/b1d01d4c29d44586a8d825a11b881ac0
 
 
 PROJECT BOARD:
