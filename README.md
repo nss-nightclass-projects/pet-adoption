@@ -30,6 +30,14 @@ Delete
 Filter
 
 SCREENSHOTS:
+![Screen Shot 2021-01-29 at 5 28 45 PM](https://user-images.githubusercontent.com/68397076/106337723-89e38c00-6257-11eb-8dde-d3e62dfe7f72.png)
+![Screen Shot 2021-01-29 at 5 25 05 PM](https://user-images.githubusercontent.com/68397076/106337725-8a7c2280-6257-11eb-93ea-f0fcb5993d96.png)
+![Screen Shot 2021-01-29 at 5 28 36 PM](https://user-images.githubusercontent.com/68397076/106337726-8b14b900-6257-11eb-9520-afe2dc8fc0e5.png)
+![Screen Shot 2021-01-29 at 5 28 52 PM](https://user-images.githubusercontent.com/68397076/106337727-8bad4f80-6257-11eb-920c-f146498dd12e.png)
+![Screen Shot 2021-01-29 at 5 28 21 PM](https://user-images.githubusercontent.com/68397076/106337728-8bad4f80-6257-11eb-9642-7f2c757392b0.png)
+![Screen Shot 2021-01-29 at 6 10 02 PM](https://user-images.githubusercontent.com/68397076/106339820-59065580-625d-11eb-8ce9-0de6fb578c4f.png)
+
+
 
 CONTRIBUTORS | Github approvals from:
 Ellie Walker: https://github.com/elliewalkersm
