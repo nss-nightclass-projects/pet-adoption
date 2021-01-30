@@ -217,7 +217,7 @@ const pets = [
   }
 
   const petsPrint = (taco) => {
-    let domString = '';
+    let domString = ' ';
     for (let i = 0; i < taco.length; i++) {
          domString += `<div class="card my-2" style="width: 18rem;" id=${i}>
                          <div class="img-container" style="background-image: url('${taco[i].imageUrl}');"></div>
@@ -226,22 +226,52 @@ const pets = [
                           <p class="card-text">${taco[i].color}</p>
                           <p class="card-text">${taco[i].specialSkill}</p>
                            <p class="card-text">${taco[i].type}</p>
-                           <p class="card-text">${taco[i].imageUrl}</p>
                            <button type="button" class="btn btn-danger" id="${i}">Delete</button>
                       </div>
                      </div>`;
       }
       printToDom('#pets', domString);
   }
-  const init = () => {
-  petsPrint(pets);
+
+  const handleButtonClick = (e) => {
+    const buttonId = e.target.id;
+  
+    const selectedPets = [];
+    for (let i = 0; i < pets.length; i++) {
+      if (pets[i].type === buttonId) {
+        selectedPets.push(pets[i]);
+      }
+    }
+  
+    if (buttonId === "all") {
+      petsPrint(pets);
+    } else {
+      petsPrint(selectedPets);
+    }
+  };
+
+  const deletePet = (e) => {
+    const targetType = e.target.type;
+    const targetId = e.target.id;
+    if (targetType === 'button') {
+      pets.splice(targetId, 1);
+    } 
+    petsPrint(pets);
   }
 
-  init();
   
   const buttonEvents = () => {
-    document.querySelector('#All').addEventListener('click', handleButtonClick);
-    document.querySelector('#Dinos').addEventListener('click', handleButtonClick);
-    document.querySelector('#Cats').addEventListener('click', handleButtonClick);
-     document.querySelector('#Dogs').addEventListener('click', handleButtonClick);
+    document.querySelector('#all').addEventListener('click', handleButtonClick);
+    document.querySelector('#dino').addEventListener('click', handleButtonClick);
+    document.querySelector('#cat').addEventListener('click', handleButtonClick);
+     document.querySelector('#dog').addEventListener('click', handleButtonClick);
+
+     document.querySelector('#pets').addEventListener('click', deletePet);
   }
+
+  const init = () => {
+    petsPrint(pets);
+    buttonEvents();
+    }
+  
+    init();
