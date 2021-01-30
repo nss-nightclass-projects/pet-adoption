@@ -227,29 +227,13 @@ const pets = [
         <p class="card-text">${taco[i].color}</p>
         <p class="card-text">${taco[i].specialSkill}</p>
         <p class="card-text">${taco[i].type}</p>
+        <button type="button" class="btn btn-danger" id="${i}">Delete</button>
         
       </div>
     </div>`;
     }
     printToDom('#pets', domString);
   }
-
-  // const handleButtonClick = (e) => {
-  //   const buttonId = e.target.id;
-  //   const selectedPets = [];
-
-  //     for (let i = 0; i < pets.length; i++) {
-  //       if (pets[i].type === buttonId) {
-  //       selectedPets.push(pets[i]);
-  //       }
-  //     }
-      
-  //     if (buttonId === 'all') {
-  //       petBuilder(pets);
-  //     } else {
-  //       petBuilder(selectedPets)
-  //     }
-  //   }
 
   const handleButtonClick = (e) => {
     const buttonId = e.target.id;
@@ -267,11 +251,22 @@ const pets = [
     }
   }
 
+  const deletePet = (e) => {
+    const targetType = e.target.type;
+    const targetId = e.target.id;
+    if (targetType === 'button') {
+      pets.splice(targetId, 1);
+    } 
+    petBuilder(pets);
+  }
+
   const buttonEvents = () => {
     document.querySelector('#all').addEventListener('click', handleButtonClick);
     document.querySelector('#cat').addEventListener('click', handleButtonClick);
     document.querySelector('#dog').addEventListener('click', handleButtonClick);
     document.querySelector('#dino').addEventListener('click', handleButtonClick);
+
+    document.querySelector('#pets').addEventListener('click', deletePet);
     }
 
 
