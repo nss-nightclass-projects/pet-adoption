@@ -16,8 +16,9 @@
 # Overview of the project
   Creating a one page project with pet cards that the user can filter by type using buttons at the top of the page. Each card can also be deleted with a delete button.
 # Link to your wireframes/prototype
-
+  https://www.figma.com/file/OiDGY195jfVOxCFjQ9UPmU/Pet-Adoption-Page?node-id=0%3A1
 # Link to the deployed project (will learn in week 5)
+  https://ewpetadoption.netlify.app/
 
 # Link to your project board (yes...even though it is a part of the repo)
   https://github.com/elliewalkersm/pet-adoption/projects/1
