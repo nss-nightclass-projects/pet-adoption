@@ -221,17 +221,14 @@ const pets = [
     let domString = '';
 
 petArr.forEach((element, i) => {
-    domString += `<div class="card my-2" style="width: 18rem;" id=${i}>
-    <div class="img-container" style="background-image: url('${element.imageUrl}');></div>
-    
+    domString += `<div class="card mb-3" style="width: 18rem;" id=${i}>
+    <h4 class="card-title">${element.name}</h4>
+    <hr>
+    <img src="${element.imageUrl}" class="card-img-top" alt="${element.name}">
     <div class="card-body">
-      <p class="card-text">${element.name}</p>
       <p class="card-text">${element.color}</p>
       <p class="card-text">${element.specialSkill}</p>
-      <p class="card-text">${element.type}</p>
-      <button type="button" class="btn btn-danger" id="${i}">Adopt!</button>
-    
-     
+      <p class="card-footer bg-info" type="button">${element.type}</p>
     </div>
   </div>`;
   });
