@@ -28,10 +28,14 @@
  -Filter pet cards by animal type
  -Delete pet cards using the delete button
 # Screenshots of your project
-  All: 
-  Cat:
-  Dog:
-  Dino:
+ <img width="1408" alt="Screen Shot 2021-01-29 at 8 51 05 PM" src="https://user-images.githubusercontent.com/76851756/106366508-fc10ab00-6301-11eb-9fd2-d11cdc47070c.png">
+
+<img width="1408" alt="Screen Shot 2021-01-29 at 8 51 48 PM" src="https://user-images.githubusercontent.com/76851756/106366513-0763d680-6302-11eb-8adc-7ccdba8e8256.png">
+
+<img width="1408" alt="Screen Shot 2021-01-29 at 8 51 34 PM" src="https://user-images.githubusercontent.com/76851756/106366519-0cc12100-6302-11eb-9c8e-25af8b68e846.png">
+
+<img width="1408" alt="Screen Shot 2021-01-29 at 8 51 23 PM" src="https://user-images.githubusercontent.com/76851756/106366522-1185d500-6302-11eb-972c-e532deda5df4.png">
+
 # List of contributors and links to their GH profiles
   https://github.com/danicrosby
   https://github.com/TaylorHardaway
