@@ -210,8 +210,14 @@ const pets = [
       imageUrl: "https://cdn.pixabay.com/photo/2018/07/16/18/32/dinosaur-3542561__340.jpg"
     }
   ];
+  const buttonEvents = () => {
+    document.querySelector('#All').addEventListener('click', handleButtonClick);
+    document.querySelector('#cat').addEventListener('click', handleButtonClick);
+    document.querySelector('#dog ').addEventListener('click', handleButtonClick);
+    document.querySelector('#dino').addEventListener('click', handleButtonClick);
+  }
 
-  const printToDom = (divId, textToPrint) => {
+ const printToDom = (divId, textToPrint) => {
     const selectedDiv = document.querySelector(divId);
     selectedDiv.innerHTML = textToPrint;
   }
@@ -235,35 +241,29 @@ const pets = [
     printToDom('#pets', domString);
   }
   
-  const handleButtonClick = (e) => {
+ const handleButtonClick = (e) => {
     const buttonId = e.target.id;
-  
-   
-    const petGroup = [];
-    for (let i = 0; i < pets.length; i++) {
-      if (pets[i].type === buttonId) {
-        petGroup.push(pets[i]);
-      }
-    }
-  
-    if (buttonId === 'All') {
+ 
+   if (buttonId === 'All') {
       petChoice(pets);
     } else {
+      const petGroup = [];
+      
+      for (let i = 0; i < pets.length; i++) {
+        if (pets[i].type === buttonId) {
+          petGroup.push(pets[i]);
+        }
+      }
       petChoice(petGroup);
     }
   
   }
   
-  const buttonEvents = () => {
-    document.querySelector('#All').addEventListener('click', handleButtonClick);
-    document.querySelector('#cat').addEventListener('click', handleButtonClick);
-    document.querySelector('#dog ').addEventListener('click', handleButtonClick);
-    document.querySelector('#dino').addEventListener('click', handleButtonClick);
-  }
+  
   
   const init = () => {
-    buttonEvents();
-    petChoice(pets);
+    buttonEvents();// establishes what happens when a buttom is clicked
+    petChoice(pets);// render the page woth all the pets
   }
   
   init();
