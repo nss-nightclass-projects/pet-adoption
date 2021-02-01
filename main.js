@@ -11,7 +11,7 @@ const pets = [
       color: "Poop-Colored",
       specialSkill: "Just picks the tomatoes off of a sandwich instead of requesting a whole new sandwich.",
       type: "dino",
-      imageUrl: "http://www.jozilife.co.za/wp-content/uploads/The-Dino-Expo.jpg"
+      imageUrl: "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/87198de2-a1ee-46fe-9f0e-9e7ef758f738/d60xotj-d0e76dbb-6c51-4abd-919c-ddd7b1eb19ee.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3sicGF0aCI6IlwvZlwvODcxOThkZTItYTFlZS00NmZlLTlmMGUtOWU3ZWY3NThmNzM4XC9kNjB4b3RqLWQwZTc2ZGJiLTZjNTEtNGFiZC05MTljLWRkZDdiMWViMTllZS5qcGcifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6ZmlsZS5kb3dubG9hZCJdfQ.oPScK8n-4mlrF2etjHoJTQfVlz7fW0GO0nXQo3qx7nM"
     },
     {
       name: "Whiskers",
@@ -53,7 +53,7 @@ const pets = [
       color: "Grey",
       specialSkill: "Comfortable in the outdoors for up to eight hours.",
       type: "dino",
-      imageUrl: "http://www.theouthousers.com/images/jck//ThanosCopter/news/grumpasaur.jpg"
+      imageUrl: "https://www.pngitem.com/pimgs/m/600-6003927_408cranidos-dp-anime-blue-and-grey-dinosaur-pokemon.png"
     },
     {
       name: "Sassy",
@@ -109,7 +109,7 @@ const pets = [
       color: "Poop-Colored",
       specialSkill: "Drives at a safe rate of speed in snow or rain.",
       type: "dino",
-      imageUrl: "https://images.readwrite.com/wp-content/uploads/2018/03/t-rex-dino-quiz-e1490854556549.jpg"
+      imageUrl: "https://blog.passmefast.co.uk/images/driving-dinosaur.jpg"
     },
     {
       name: "Muffin",
@@ -123,7 +123,7 @@ const pets = [
       color: "Poop-Colored",
       specialSkill: "Proficient in air guitar",
       type: "dino",
-      imageUrl: "https://www.nation.co.ke/image/view/-/4078922/highRes/1742693/-/maxw/600/-/1453yvh/-/DINO.jpg"
+      imageUrl: "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/503cad3c-1715-428b-b4f5-13a63f962130/d4j78kz-e6c5416a-4854-4d2c-8e2a-7192cf9ea286.png/v1/fill/w_900,h_686,strp/mystery_guitar_dinosaur_by_transientart_d4j78kz-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3siaGVpZ2h0IjoiPD02ODYiLCJwYXRoIjoiXC9mXC81MDNjYWQzYy0xNzE1LTQyOGItYjRmNS0xM2E2M2Y5NjIxMzBcL2Q0ajc4a3otZTZjNTQxNmEtNDg1NC00ZDJjLThlMmEtNzE5MmNmOWVhMjg2LnBuZyIsIndpZHRoIjoiPD05MDAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.nq3m1z-SGO_9k18KWoNtVySSDfABSBS3b7n0uYpo_Ho"
     },
     {
       name: "Callie",
@@ -144,7 +144,7 @@ const pets = [
       color: "Red",
       specialSkill: "Owns a Nintendo Power Glove.",
       type: "dino",
-      imageUrl: "https://img.buzzfeed.com/buzzfeed-static/static/2015-11/2/12/enhanced/webdr15/anigif_enhanced-29802-1446485228-10.gif?crop=250:165;0,0&downsize=715"
+      imageUrl: "https://previews.123rf.com/images/red33/red331202/red33120200041/12151191-angry-mean-red-dinosaur-t-rex-vector-illustration-art.jpg"
     },
     {
       name: "Snuggles",
@@ -207,7 +207,7 @@ const pets = [
       color: "Red",
       specialSkill: "Doesn’t get weirded out by the word “moist.”",
       type: "dino",
-      imageUrl: "http://lsae2.iypcdn.com/static//modules/uploads/photos/language1/dino-live-22.jpg?119"
+      imageUrl: "https://i5.walmartimages.com/asr/b363c964-14ca-4c64-a0d9-4d3d6721f397_1.644e2bd413bdcca123d344b43944849a.jpeg?odnWidth=612&odnHeight=612&odnBg=ffffff"
     }
   ];
 
@@ -221,18 +221,16 @@ const pets = [
     let domString = '';
 
 petArr.forEach((element, i) => {
-    domString += `<div class="card my-2" style="width: 18rem;" id=${i}>
-    <div class="img-container" style="background-image: url('${element.imageUrl}');></div>
-    
+    domString += `<div class="card mb-3" style="width: 18rem;" id=${i}>
+    <h4 class="card-title">${element.name}</h4>
+    <hr>
+    <img src="${element.imageUrl}" class="card-img-top" alt="${element.name}">
     <div class="card-body">
-      <p class="card-text">${element.name}</p>
       <p class="card-text">${element.color}</p>
       <p class="card-text">${element.specialSkill}</p>
-      <p class="card-text">${element.type}</p>
-      <button type="button" class="btn btn-danger" id="${i}">Adopt!</button>
-    
-     
     </div>
+      <p class="card-footer" type="button">${element.type}</p>
+    
   </div>`;
   });
   printToDom('#pets', domString);
