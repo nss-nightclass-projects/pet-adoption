@@ -213,15 +213,16 @@ const pets = [{
 ];
 
 const selectedAnimals = [];
+let filter = false;
 
 // ****** printToDom  ******
-const printToDom = (divID, textToPrint) => {
+const PrintToDom = (divID, textToPrint) => {
     const selectedDiv = document.querySelector(divID);
     selectedDiv.innerHTML = textToPrint;
 }
 
 // taco = is the pets array
-const petBuilder = (taco) => {
+const PetBuilder = (taco) => {
     let domString = '';
 
     taco.forEach((item, i) => {
@@ -231,9 +232,11 @@ const petBuilder = (taco) => {
                         </div>
                         <div class="card-body">
                           <div class="img-container" style="background-image: url('${item.imageUrl}');"></div>
-                          <h5 class="card-title">Color</h5>
+                          <h5 class="card-title">${item.color}</h5>
                           <p class="card-text">${item.specialSkill}</p>
+                         
                         </div>
+                        <p><button type="button" class="btn btn-danger" id="${i}">Delete</button></p>
                         <div class="card-footer text-muted">
                           ${item.type}
                         </div>
@@ -241,7 +244,7 @@ const petBuilder = (taco) => {
         // }
     })
 
-    printToDom('#pets', domString);
+    PrintToDom('#pets', domString);
 }
 
 // expanding on the function below
@@ -263,10 +266,10 @@ const HandleButtonClick = (e) => {
             }
         }
         filter = false;
-        petBuilder(pets);
+        PetBuilder(pets);
     } else {
         filter = true;
-        petBuilder(selectedAnimals);
+        PetBuilder(selectedAnimals);
     }
 
 }
@@ -276,11 +279,43 @@ const ButtonEvents = () => {
     document.querySelector('#cat').addEventListener('click', HandleButtonClick);
     document.querySelector('#dog').addEventListener('click', HandleButtonClick);
     document.querySelector('#dino').addEventListener('click', HandleButtonClick);
+    document.querySelector('#pets').addEventListener('click', DeletePet);
+}
+
+// D in crud delete pie
+const DeletePet = (e) => {
+
+    const tartgetType = e.target.type;
+    const targetID = e.target.id;
+    let petID = 0;
+    const targetIDNum = parseInt(e.target.id, 10);
+
+    if (tartgetType === 'button') {
+        // Do Something 
+        if (filter) {
+            console.log(selectedAnimals[targetIDNum]);
+            for (let i = 0; i < pets.length; i++) {
+                if ((pets[i].name === selectedAnimals[targetIDNum].name) &&
+                    (pets[i].color === selectedAnimals[targetIDNum].color) &&
+                    (pets[i].type === selectedAnimals[targetIDNum].type)) {
+
+                    petID = i;
+                    break;
+                }
+            }
+            pets.splice(petID, 1);
+            selectedAnimals.splice(targetID, 1);
+            PetBuilder(selectedAnimals);
+        } else {
+            pets.splice(targetID, 1);
+            PetBuilder(pets);
+        }
+    }
 }
 
 const init = () => {
     ButtonEvents();
-    petBuilder(pets);
+    PetBuilder(pets);
 }
 
 init();

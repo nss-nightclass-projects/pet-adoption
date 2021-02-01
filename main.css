@@ -10,6 +10,7 @@ body {
 
 .img-container {
     height: 200px;
+    min-width: 250px;
     background-size: cover;
     background-position: center;
 }
