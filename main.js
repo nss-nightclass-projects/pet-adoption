@@ -1,3 +1,4 @@
+
 const pets = [
     {
       name: "Dusty",
@@ -130,7 +131,7 @@ const pets = [
       color: "Blue",
       specialSkill: "Listens attentively to boring stories.",
       type: "dog",
-      imageUrl: "http://dailynewsdig.com/wp-content/uploads/2014/03/Creative-And-Funny-Dog-Stock-Photography-Pictures-2.jpg"
+      imageUrl: "https://s3.amazonaws.com/cdn-origin-etr.akc.org/wp-content/uploads/2017/11/03161252/Irish-Wolfhound-puppy-sitting-in-the-grass.jpg"
     },
     {
       name: "Spooky",
@@ -151,7 +152,7 @@ const pets = [
       color: "Orange",
       specialSkill: "Is comfortable with jokes about his receding hairline.",
       type: "cat",
-      imageUrl: "http://funnyanimalphoto.com/wp-content/uploads/2013/08/cat_caught_mouse_thegatewaypundit.jpg"
+      imageUrl: "https://upload.wikimedia.org/wikipedia/en/thumb/b/bc/Garfield_the_Cat.svg/250px-Garfield_the_Cat.svg.png"
     },
     {
       name: "Buddy",
@@ -172,7 +173,7 @@ const pets = [
       color: "Red",
       specialSkill: "Knows the words to 4 rap songs.",
       type: "cat",
-      imageUrl: "http://funbk.s3.amazonaws.com/wp-content/uploads/2016/06/funny-cat-video-which-will-make-you-laugh-louder.jpg"
+      imageUrl: "https://i.etsystatic.com/10521885/r/il/4f0b1a/870572656/il_570xN.870572656_lzra.jpg"
     },
     {
       name: "Bubba",
@@ -222,23 +223,23 @@ const pets = [
 
 petArr.forEach((element, i) => {
     domString += `<div class="card mb-3" style="width: 18rem;" id=${i}>
-    <h4 class="card-title">${element.name}</h4>
+    <h4 class="card-title" style="color:red;">${element.name}</h4>
     <hr>
     <img src="${element.imageUrl}" class="card-img-top" alt="${element.name}">
     <div class="card-body">
       <p class="card-text">${element.color}</p>
       <p class="card-text">${element.specialSkill}</p>
     </div>
-      <p class="card-footer" type="button">${element.type}</p>
+      <p class="card-footer">${element.type}</p>
     
   </div>`;
   });
   printToDom('#pets', domString);
-    }
+    };
 
     const buttonClick = (e) => {
       const buttonId = e.target.id;
-    
+
       const selectedPets = [];
     for (let i = 0; i < pets.length; i++) {
       if (pets[i].type === buttonId) {
@@ -251,13 +252,16 @@ petArr.forEach((element, i) => {
     } else {
       petBuilder(selectedPets);
    }
-  }
+  };
+
+
     
      const selectAnimal = () => {
        document.querySelector('#dog').addEventListener('click', buttonClick);
        document.querySelector('#cat').addEventListener('click', buttonClick);
        document.querySelector('#dino').addEventListener('click', buttonClick);
        document.querySelector('#See-all').addEventListener('click', buttonClick);
+       
      }
     
   
@@ -268,6 +272,4 @@ petArr.forEach((element, i) => {
 
   }
 
-
-
-  run();
+ run();
