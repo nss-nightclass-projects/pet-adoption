@@ -209,35 +209,99 @@ const petsArr = [
     type: "dino",
     imageUrl: "http://lsae2.iypcdn.com/static//modules/uploads/photos/language1/dino-live-22.jpg?119"
   }
-];
+]; // Created array of objescts for my dat structure // 
 
+// Created the function that prints the selected div by the DivId to the DOM //
 const printToDom = (divId, textToPrint) => {
   const selectedDiv = document.querySelector(divId);
-  selectedDiv.innerHTML = textToPrint;
+
+  selectedDiv.innerHTML = textToPrint; // Prints the div to the innerHTML of the DOM //
 }
 
-const petBuilder = (petArr) => {
+
+// This function cerates a for loop that creates a card with all of our data. It iterates of the objects of our pets array and adds the field of each object each time that it runs // It prints this to the dom string wach time it runs. //
+const petCards = (petArr) => {
   let domString = '';
 
   petArr.forEach((element, i) => {
     domString += `<div class="card my-2" style="width: 18rem;" id=${i}>
       <div class="img-container" style="background-image: url('${element.imageUrl}');"></div>
         <img src="${element.imageUrl}" alt="${element.name}">
-      </div>
+      
       <div class="card-body">
         <p class="card-text">${element.name}</p>
         <p class="card-text">${element.color}</p>
         <p class="card-text">${element.specialSkill}</p>
-        <p class="card-text">${element.type}</p>
+        <p class="card-text">${element.type} </p>
+
       </div>
     </div>`;
   });
 
+  // We are passing the printToDom function the divId of pets and waht text to print. In this case, we want to the print the domString that we created. //
   printToDom('#pets', domString);
 }
 
-const init = () => {
-  petBuilder(petsArr);
+// Need to create even listeners that will filter the data assoiciated with their type. We want this to happen when we click the button of that type. //
+
+// First, I need to create a function that will house all of our event selectors and what we want those to select // 
+
+// See like 261 - Creating a reusablefunction for our event listeners that targets the cb function. //
+
+const allButtonClicks = (e) => {
+  console.log(e.target.id);
+}
+
+
+
+// const targetTheButtonEvents = () => {
+//   const dggyButton = document.querySelector('#dogs');
+//   const kittyButton = document.querySelector('#cats');
+//   const rawrButton = document.querySelector('#dinos');
+//   const babiesButton = document.querySelector('#all');
+  
+  // Created variables that equal the selectors of the button ID we want //
+
+  // Chaining the event listeners. //
+  const targetTheButtonEvents = () => {
+    document.querySelector('#all').addEventListener('click', allButtonClicks);
+    document.querySelector('#cats').addEventListener('click', allButtonClicks);
+    const rawrButton = document.querySelector('#dinos');
+    const dggyButton = document.querySelector('#dogs');
+
+  // Now, we need to target the variables with event listeners //
+
+  // babiesButton.addEventListener('click', (e) => { // created an annonymous function to pass // 
+  //   console.log(e.target.id); // Logged taerget id of the annonymous function. That logged 'All' //
+  // }) 
+  
+  // Refactored the babeiesButon.addEventListener to pass it the 'click' of our allButtonClicks function that handles all of our event listeners for the 'click' of each buitton. // 
+
+   // Reusable function that listens for the 'click' event listener of our allButtonClicks function // 
+
+  //  dggyButton.addEventListener('click', allButtonClicks);
+
+  // We can method chain this to each query selector so that we don't have to re-write this for each of them. See targetTheButtonEvents function for this! //
+
+
+  
+  // I should make this into a reusable function that targets the cb function?? So that we can do this for all the other buttons, but not have to add an event listener to each individually. This will do it all together for us. //
+
+
+
 
 }
-init();
+
+
+
+
+
+
+
+// function wraps everything that we did above. Calls the petBuilder function and passes it the petsArr object of arrays (our data) //
+const init = () => {
+  targetTheButtonEvents();
+  petCards(petsArr);
+}
+
+init(); // This calls the init function that has all of our logic wrapped into it. Does not run unless call the function. 
