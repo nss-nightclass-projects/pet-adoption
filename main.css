@@ -1,0 +1,43 @@
+/*JID Pet Adoption */
+
+body {
+    background-color: beige;
+}
+
+.card {
+    max-width: 300px;
+}
+
+.img-container {
+    height: 200px;
+    min-width: 250px;
+    background-size: cover;
+    background-position: center;
+}
+
+.btnClassFilterAll {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.btnClassFilterCats {
+    background-color: #2188ff;
+}
+
+.btnClassFilterDogs {
+    background-color: #22863a;
+}
+
+.btnClassFilterDinos {
+    background-color: #FF8C00;
+}
+
+
+/* .pie-form {
+    width: 600px;
+    margin: 0 auto;
+    text-align: left;
+} */
+
+
+/*END */
