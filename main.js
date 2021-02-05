@@ -210,6 +210,7 @@ const pets = [
       imageUrl: "https://images.huffingtonpost.com/2016-12-07-1481136416-8823020-DinoChickensHeader-thumb.jpeg"
     }
   ];
+  const deletedPets = [];
 
   // Print to DOM function
 const printToDom = (divId, textToPrint) => {
@@ -240,7 +241,8 @@ for (let i = 0; i < taco.length; i ++) {
   </div>
 </div>`
 }
-printToDom('#pets', domString)
+printToDom('#pets', domString);
+document.querySelector('.delete').addEventListener('click', removePets);
 
  }
  
@@ -265,6 +267,20 @@ const handleButtonClick = (e) => {
   }
 }
 
+const removePets = (e) => {
+const targetType = e.target.type;
+const targetId = e.target.id;
+
+if (targetType === 'button') {
+  pets.splice(targetId, 1)
+}
+cardBuilder(pets);
+
+}
+
+
+
+
 
   //button events function
 const buttonEvents = () => {
@@ -272,6 +288,7 @@ const buttonEvents = () => {
   document.querySelector('#dog').addEventListener('click', handleButtonClick);
   document.querySelector('#dino').addEventListener('click', handleButtonClick);
   document.querySelector('#all').addEventListener('click', handleButtonClick);
+ 
   
 
  
