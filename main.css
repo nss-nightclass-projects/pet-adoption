@@ -1,3 +1,20 @@
 body {
-  background-color:ivory
+  background-color: rgb(135, 168, 150);
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+}
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  text-align: center;
+  padding: 30px;
+}
+
+#pets {
+  display: flex;
+  flex-flow: wrap;
+  justify-content: space;
+  padding: 20px;
+  margin: 15px;
 }
